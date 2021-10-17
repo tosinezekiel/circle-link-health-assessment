@@ -26,10 +26,10 @@ class Create extends Component
 
     public function save(){
         $validated = $this->validate();
-        // dd($this->patient);
         (new PatientService())->createBloodPressureReading($this->patient, $validated);
         $this->message  = "Saved.";
         $this->resetFormData();
+        return $this->redirect(route('patient.show', $this->patient->id));
     }
 
     public function render()

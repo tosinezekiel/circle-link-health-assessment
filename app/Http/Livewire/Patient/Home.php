@@ -24,7 +24,9 @@ class Home extends Component
         $this->exporting = true;
         $this->exportFinished = false;
         
-        $batch = Bus::dispatch(new ExportPatientJob());
+        $batch = Bus::batch([
+            new ExportPatientJob,
+        ])->dispatch();
         
 
         $this->batchId = $batch->id;

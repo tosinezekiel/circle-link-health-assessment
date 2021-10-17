@@ -43,8 +43,8 @@ class PatientsExport implements FromQuery, WithHeadings, WithMapping
             $patient->last_name,
             $patient->gender,
             $patient->date_of_birth,
-            $patient->created_at,
-            $patient->readings->count
+            $patient->created_at->format('Y-m-d'),
+            $patient->readings->count() ?? '0'
         ];
     }
 

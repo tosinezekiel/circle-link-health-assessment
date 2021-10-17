@@ -59,4 +59,16 @@ class BloodPressureReadingTest extends TestCase
         ->call('save')
         ->assertHasErrors(['lower' => 'numeric']);
     }
+
+    public function test_that_user_get_redirected_after_submission()
+    {
+        $patient = Patient::factory()->create();
+        Livewire::test(Create::class, [$patient->id])
+        ->set('upper', 120)
+        ->set('lower', 180)
+        ->call('save')
+        ->assertHasNoErrors()
+        ->assertSee('Saved.')
+        ->assertRedirect(route('patient.show', $patient->id));
+    }
 }

@@ -19,7 +19,7 @@
     </head>
     <body class="bg-circle-link-health-secondary-color">
         <div class="font-sans text-gray-900 antialiased">
-            <div class="max-w-5xl flex flex-col mx-auto px-10 pt-5 bg-white m-20">
+            <div class="max-w-5xl flex flex-col mx-auto px-10 py-10 pt-5 bg-white m-20">
                 <div class="w-64 flex mx-auto justify-center my-10">
                     <img class="object-contain w-full" src="{{ asset('images/circleLink-health-trademark-logo.png') }}" alt="Circle Link Health">
                 </div>
