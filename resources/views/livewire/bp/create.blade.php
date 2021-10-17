@@ -6,11 +6,11 @@
             <a href="{{ route('patient.home') }}" class="text-xl text-gray-900 capitalize underline">{{ __('home') }}</a>
         </div>
 
-        <x-input.group for="upper" label="First Name (mmHg):" :error="$errors->first('upper')">
+        <x-input.group for="upper" label="Upper (mmHg):" :error="$errors->first('upper')">
             <x-input.text wire:model.lazy="upper" id="upper" placeholder="Upper" />
         </x-input.group>
     
-        <x-input.group for="lower" label="Last Name (mmHg):" :error="$errors->first('lower')">
+        <x-input.group for="lower" label="Lower (mmHg):" :error="$errors->first('lower')">
             <x-input.text wire:model.lazy="lower" id="lower" placeholder="Lower" />
         </x-input.group>
 
